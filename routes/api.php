@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\KudoBoardController;
+use App\Http\Controllers\Backend\CategorieController;
+use App\Http\Controllers\Backend\InvitationController;
+use App\Http\Controllers\Backend\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::apiResource('kudo_boards',KudoBoardController::class);
+Route::apiResource('categorie',CategorieController::class);
+Route::apiResource('invitation',InvitationController::class);
+Route::apiResource('comment',CommentController::class);
