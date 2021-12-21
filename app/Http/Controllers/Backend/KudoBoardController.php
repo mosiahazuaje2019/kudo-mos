@@ -77,4 +77,9 @@ class KudoBoardController extends Controller
         $kudoBoard->delete();
         return response()->json(null, 204);
     }
+
+    public function getKudos($id) {
+        $kudoBoards = KudoBoard::where('categorie_id',$id)->get();
+        return response()->json($kudoBoards);
+    }
 }

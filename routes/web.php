@@ -4,6 +4,8 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\Backend\KudoBoardController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,8 +26,15 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/dashboard', function () {
+/* Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard'); */
+
+Route::group(['auth', 'verified'], function () {
+    Route::inertia('/dashboard', 'Dashboard')->name('dashboard');
+    Route::inertia('/kudoboards', 'KudoBoards')->name('kudoboards');
+    Route::inertia('/kudocards', 'KudoCard')->name('kudocards');
+});
+
 
 require __DIR__.'/auth.php';

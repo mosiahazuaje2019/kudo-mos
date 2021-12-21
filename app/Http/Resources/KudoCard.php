@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Categorie extends JsonResource
+class KudoCard extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,9 +14,6 @@ class Categorie extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-            'id'   => $this->id,
-            'name' => $this->name
-        ];
+        return parent::toArray($request);
     }
 }

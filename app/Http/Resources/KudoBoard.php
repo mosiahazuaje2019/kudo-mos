@@ -14,6 +14,12 @@ class KudoBoard extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id'           => $this->id,
+            'name'         => $this->name,
+            'categorie_id' => $this->categorie_id,
+            'email'        => $this->email,
+            'birthday'     => $this->birthday,
+        ];
     }
 }
