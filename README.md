@@ -26,4 +26,4 @@ Una vez los contenedores esten arriba se debe proceder a utilizar los siguientes
 Se procede a registrarse en el link localhost/register, para luego hacer login y comenzar a hacer uso de la app.
 Despues de loguearse la primera ventana es un listado de los KudoBoard creados, en cada uno hay personas asociadas a cada Kudo y se le podra hacer un Kudo a cada persona.
 
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/Xgk4QldzCiM)
+[![Watch the video](https://cdn1.vectorstock.com/i/1000x1000/42/70/watch-now-button-logo-icon-with-text-and-video-vector-28434270.jpg)](https://youtu.be/Xgk4QldzCiM)
